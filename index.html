@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Facial Expression detection using pre trained model in TensorFlow.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Facial emotion detection using pre trained model in TensorFlow.js</h1>
+
+    <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become
+        visible to use.</p>
+
+    <input id="clickMe" type="button" value="Load Model" />
+    <section id="demos" class="invisible">
+
+        <p>When ready click "enable webcam"
+            below and accept access to the webcam when the browser asks (check the top left of your window)</p>
+
+        <div id="liveView" class="camView">
+            <button id="webcamButton">Take Picture</button>
+            <!-- <video id="webcam" autoplay width="500" height="350"></video> -->
+            <video id="webcam" autoplay playsinline width="550" height="380"></video>
+            <canvas id="canvas" class="d-none"></canvas>
+        </div>
+    </section>
+
+    <!-- Import Webcam-easy library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
